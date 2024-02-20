@@ -13,14 +13,10 @@
   </style>
   <body>
     <div class="form-container">
-      <form method="get">
-        <!-- <label for="Name"
-          >First-Name: <input type="text" name="name" id="name" /></label
-        ><br /> -->
+      <form method="POST">
         <label for="Name"
-          >Last-ame: <input type="text" name="name" id="name" /></label
+          >Name: <input type="text" name="name" id="name" /></label
         ><br />
-
         <label for="Email"
           >Email: <input type="email" name="email" id="email" /></label
         ><br />
@@ -39,9 +35,10 @@
       </form>
     </div>
 
-    <?php
-    $name = $_GET.["Name"];
-    echo "$name";
+  <h1>Welcome:  <?php 
+    $name = $_POST["name"];
+    echo "".$name."";
     ?>
+  </h1>
   </body>
 </html>
