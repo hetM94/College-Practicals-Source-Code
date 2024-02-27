@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prac2</title>
   </head>
   <style>
     label,
     input {
-      margin-top: 6px;
+      margin-top: 5px;
     }
   </style>
   <body>
-    <div class="form-container">
-      <form method="POST">
-        <label for="Name"
-          >Name: <input type="text" name="name" id="name" /></label
-        ><br />
-        <label for="Email"
-          >Email: <input type="email" name="email" id="email" /></label
-        ><br />
-        <label for="Password"
-          >Password:
-          <input type="password" name="password" id="password" /></label
-        ><label for="c-password"
-          >Confirm Password:
-          <input type="password" name="c-password" id="c-password" /></label
-        ><br />
+    <form method="POST">
+      <label for="Name">Name: <input type="text" name="name" /></label><br />
+      <label for="Email">Email: <input type="email" name="email" /></label
+      ><br />
+      <label for="address">Address: <input type="address" name="address"></label><br />
+      <label for="number"
+        >Phone Number: <input type="number" name="p-number"
+      /></label>
 
-        <label for="gander">Male<input type="radio" name="gender" id="male"></label>
-        <label for="gander">Female<input type="radio" name="gender" id="Female"></label>
+      <br /><input type="submit" name="submit" id="submit" value="Submit" />
+      <br>
 
-        <br><input type="submit" name="submit" id="submit" value="Submit">
-      </form>
-    </div>
-
-  <h1>Welcome:  <?php 
-    $name = $_POST["name"];
-    echo "".$name."";
-    ?>
-  </h1>
+      <?php
+if(isset($_POST["submit"]))
+{
+  $name = $_POST["name"];
+  $email = $_POST["email"];
+  $phone = $_POST["p-number"];
+  $address = $_POST["address"];
+  echo $name,"<br>";
+  echo $email,"<br>";
+  echo $address,"<br>";
+  echo $phone,"<br>";
+}
+    ?> 
+    </form>
   </body>
 </html>

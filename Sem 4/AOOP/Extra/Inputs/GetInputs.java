@@ -20,20 +20,16 @@ class GetInputs {
         System.out.print(Message);
         return scanner.nextByte();
     }
-    public static double getByte(String message){
+    public static double getS(String message){
         Scanner scanner = new Scanner(System.in);
 
         System.out.print(Message);
-        return scanner.nextByte();
+        return scanner.nextLine();
     }
-    public static void main(String[] args) {
-        int testi;
-        float testf;
+    public static double getCh(String message){
+        Scanner scanner = new Scanner(System.in);
 
-        testi = getInt("Enter Integer: ");
-        System.out.println("Value of integer: " + testi);
-
-        testf = getFloat("Enter Float: ");
-        System.out.println("Value of float: " + testf);
+        System.out.print(Message);
+        return scanner.nextChar();
     }
 }
