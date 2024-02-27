@@ -19,5 +19,6 @@ class Demo2 extends Demo1 { // This line will throw error "cannot inherit from f
   }
 }
 
-class Prac10
-  public static void main(String args[])
+class Prac10{
+  public static void main(String args[]){}
+}
